@@ -1,0 +1,15 @@
+{
+    "name": "horttcore/gutenberg-animate-on-scroll",
+    "description": "Add aos.js animations to gutenberg blocks",
+    "type": "wordpress-plugin",
+    "require": {
+        "horttcore/wp-plugin": "^1.0"
+    },
+    "license": "GPL-3.0-or-later",
+    "authors": [
+        {
+            "name": "Ralf Hortt",
+            "email": "me@horttcore.de"
+        }
+    ]
+}
