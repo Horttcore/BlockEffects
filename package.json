@@ -1,5 +1,5 @@
 {
-  "name": "gutenberg-animate-on-scroll",
+  "name": "block-effects",
   "version": "1.0.0",
   "description": "Add aos.js animations to gutenberg blocks",
   "repository": {
@@ -19,6 +19,7 @@
     "laravel-mix": "^2.1.14"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "classnames": "^2.2.6"
   }
 }

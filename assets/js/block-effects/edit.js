@@ -5,7 +5,7 @@ import supportedBlocks from './blocks';
 const withDataAnimation = createHigherOrderComponent( ( BlockListBlock ) => {
     return ( props ) => {
 
-        if ( !lodash.includes(supportedBlocks(), props.block.name))
+        if ( !window.lodash.includes(supportedBlocks(), props.block.name))
             return <BlockListBlock { ...props } />;
 
         const { animation, animationAnchor, animationDuration } = props.block.attributes;
@@ -22,4 +22,4 @@ const withDataAnimation = createHigherOrderComponent( ( BlockListBlock ) => {
     };
 }, 'withDataAnimation' );
 
-wp.hooks.addFilter( 'editor.BlockListBlock', 'gutenberg-animate-on-scroll/animate-on-scroll/edit', withDataAnimation );
+wp.hooks.addFilter( 'editor.BlockListBlock', 'block-effects/animate-on-scroll/edit', withDataAnimation );

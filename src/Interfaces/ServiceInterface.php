@@ -1,7 +1,7 @@
 <?php
-namespace Horttcore\GutenbergAnimateOnScroll\Interfaces;
+namespace Horttcore\BlockEffects\Interfaces;
 
 interface ServiceInterface
 {
-    abstract function register();
+    public function register();
 }

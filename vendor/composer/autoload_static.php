@@ -10,6 +10,7 @@ class ComposerStaticInit3ede8810717d9bdc1e1d0b18406bff92
         'H' => 
         array (
             'Horttcore\\Plugin\\' => 17,
+            'Horttcore\\BlockEffects\\' => 23,
         ),
     );
 
@@ -17,6 +18,10 @@ class ComposerStaticInit3ede8810717d9bdc1e1d0b18406bff92
         'Horttcore\\Plugin\\' => 
         array (
             0 => __DIR__ . '/..' . '/horttcore/wp-plugin/src',
+        ),
+        'Horttcore\\BlockEffects\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
         ),
     );
 

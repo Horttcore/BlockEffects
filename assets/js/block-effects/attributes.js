@@ -2,14 +2,14 @@ import supportedBlocks from './blocks';
 
 wp.hooks.addFilter(
 	'blocks.registerBlockType',
-	'horttcore/gutenberg-animate-on-scroll/attribute',
+	'horttcore/block-effects/attribute',
 	function( settings, name ) {
 
-		if ( !lodash.includes(supportedBlocks(),name))
+		if ( !window.lodash.includes(supportedBlocks(),name))
             return settings;
 
-		settings = lodash.assign( {}, settings, {
-			attributes: lodash.assign( {}, settings.attributes, {
+		settings = window.lodash.assign( {}, settings, {
+			attributes: window.lodash.assign( {}, settings.attributes, {
 				animation: {
 					type: 'string',
 				},

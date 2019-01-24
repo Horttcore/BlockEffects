@@ -7,4 +7,5 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Horttcore\\Plugin\\' => array($vendorDir . '/horttcore/wp-plugin/src'),
+    'Horttcore\\BlockEffects\\' => array($baseDir . '/src'),
 );
