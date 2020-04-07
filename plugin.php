@@ -13,7 +13,8 @@
 
 namespace Horttcore\BlockEffects;
 
-use Horttcore\Plugin\PluginFactory;
+use RalfHortt\Plugin\PluginFactory;
+use RalfHortt\TranslatorService\Translator;
 
 # ------------------------------------------------------------------------------
 # Autoloader
@@ -34,6 +35,6 @@ endif;
 # Bootstrap
 # ------------------------------------------------------------------------------
 PluginFactory::create()
-    ->addTranslation('block-effects', plugin_basename(__FILE__) . '/../languages/' )
+    ->addService(Translator::class, 'block-effects', dirname(plugin_basename(__FILE__)).'/languages/')
     ->addService(BlockEffects::class)
     ->boot();

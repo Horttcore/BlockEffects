@@ -2,5 +2,8 @@
     "/dist/js/block-effects-editor.js": "/dist/js/block-effects-editor.js",
     "/dist/css/block-effects.css": "/dist/css/block-effects.css",
     "/dist/css/block-effects-editor.css": "/dist/css/block-effects-editor.css",
+    "/dist/js/block-effects-editor.js.map": "/dist/js/block-effects-editor.js.map",
+    "/dist/css/block-effects.css.map": "/dist/css/block-effects.css.map",
+    "/dist/css/block-effects-editor.css.map": "/dist/css/block-effects-editor.css.map",
     "/dist/js/block-effects.js": "/dist/js/block-effects.js"
 }

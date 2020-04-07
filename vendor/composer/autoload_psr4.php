@@ -6,6 +6,8 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'Horttcore\\Plugin\\' => array($vendorDir . '/horttcore/wp-plugin/src'),
+    'RalfHortt\\TranslatorService\\' => array($vendorDir . '/ralfhortt/translator-service/src'),
+    'RalfHortt\\ServiceContracts\\' => array($vendorDir . '/ralfhortt/service-contracts/src'),
+    'RalfHortt\\Plugin\\' => array($vendorDir . '/ralfhortt/wp-plugin/src'),
     'Horttcore\\BlockEffects\\' => array($baseDir . '/src'),
 );

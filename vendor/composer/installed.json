@@ -1,25 +1,98 @@
 [
     {
-        "name": "horttcore/wp-plugin",
+        "name": "ralfhortt/service-contracts",
         "version": "1.0.1",
         "version_normalized": "1.0.1.0",
         "source": {
             "type": "git",
-            "url": "https://github.com/Horttcore/wp-plugin.git",
-            "reference": "e46280beadd856d5f9515a62f6470908f0592b58"
+            "url": "https://github.com/Horttcore/ServiceContract.git",
+            "reference": "56f3a5b13dc403e18848b5a3197ce4f085501914"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/Horttcore/wp-plugin/zipball/e46280beadd856d5f9515a62f6470908f0592b58",
-            "reference": "e46280beadd856d5f9515a62f6470908f0592b58",
+            "url": "https://api.github.com/repos/Horttcore/ServiceContract/zipball/56f3a5b13dc403e18848b5a3197ce4f085501914",
+            "reference": "56f3a5b13dc403e18848b5a3197ce4f085501914",
             "shasum": ""
         },
-        "time": "2019-01-16T11:00:45+00:00",
+        "time": "2019-12-03T14:57:47+00:00",
         "type": "library",
         "installation-source": "dist",
         "autoload": {
             "psr-4": {
-                "Horttcore\\Plugin\\": "src/"
+                "RalfHortt\\ServiceContracts\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Ralf Hortt",
+                "email": "me@horttcore.de"
+            }
+        ],
+        "description": "A service contract"
+    },
+    {
+        "name": "ralfhortt/translator-service",
+        "version": "1.0.2",
+        "version_normalized": "1.0.2.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Horttcore/TranslatorService.git",
+            "reference": "6f432df0581b532a6e071e3bf65276bfc31f177b"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Horttcore/TranslatorService/zipball/6f432df0581b532a6e071e3bf65276bfc31f177b",
+            "reference": "6f432df0581b532a6e071e3bf65276bfc31f177b",
+            "shasum": ""
+        },
+        "require": {
+            "ralfhortt/service-contracts": "^1"
+        },
+        "time": "2020-01-13T14:32:20+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "RalfHortt\\TranslatorService\\": "src/"
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Ralf Hortt",
+                "email": "me@horttcore.de"
+            }
+        ],
+        "description": "A translator service for WordPress"
+    },
+    {
+        "name": "ralfhortt/wp-plugin",
+        "version": "2.0.1",
+        "version_normalized": "2.0.1.0",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/Horttcore/wp-plugin.git",
+            "reference": "3c63d3ad1c982f6156403a198375a962f66c3d5a"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/Horttcore/wp-plugin/zipball/3c63d3ad1c982f6156403a198375a962f66c3d5a",
+            "reference": "3c63d3ad1c982f6156403a198375a962f66c3d5a",
+            "shasum": ""
+        },
+        "time": "2020-01-09T19:36:12+00:00",
+        "type": "library",
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "RalfHortt\\Plugin\\": "src/"
             }
         },
         "notification-url": "https://packagist.org/downloads/",

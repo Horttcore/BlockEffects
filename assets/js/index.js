@@ -1,1 +1,0 @@
-import './animate-on-scroll';

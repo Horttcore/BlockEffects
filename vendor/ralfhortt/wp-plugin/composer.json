@@ -1,0 +1,16 @@
+{
+  "name": "ralfhortt/wp-plugin",
+  "description": "A WordPress plugin helper",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ralf Hortt",
+      "email": "me@horttcore.de"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "RalfHortt\\Plugin\\": "src/"
+    }
+  }
+}

@@ -1,14 +1,12 @@
 <?php
-namespace Horttcore\Plugin;
-
-use Horttcore\Plugin\Plugin;
+namespace RalfHortt\Plugin;
 
 /**
  * Class PluginFactory
  *
  * @since   1.0.0
  *
- * @package Horttcore\Plugin
+ * @package RalfHortt\Plugin
  * @author  Ralf Hortt <me@horttcore.de>
  */
 class PluginFactory
@@ -24,7 +22,5 @@ class PluginFactory
     public static function create()
     {
         return new Plugin();
-	}
-	
-
+    }
 }

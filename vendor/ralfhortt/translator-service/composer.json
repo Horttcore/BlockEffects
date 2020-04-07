@@ -1,0 +1,19 @@
+{
+  "name": "ralfhortt/translator-service",
+  "description": "A translator service for WordPress",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Ralf Hortt",
+      "email": "me@horttcore.de"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "RalfHortt\\TranslatorService\\": "src/"
+    }
+  },
+  "require": {
+    "ralfhortt/service-contracts": "^1"
+  }
+}

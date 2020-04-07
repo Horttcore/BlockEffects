@@ -3,13 +3,13 @@ import supportedBlocks from './blocks';
 wp.hooks.addFilter(
 	'blocks.registerBlockType',
 	'horttcore/block-effects/attribute',
-	function( settings, name ) {
+	function (settings, name) {
 
-		if ( !window.lodash.includes(supportedBlocks(),name))
-            return settings;
+		// if ( !window.lodash.includes(supportedBlocks(),name))
+		//     return settings;
 
-		settings = window.lodash.assign( {}, settings, {
-			attributes: window.lodash.assign( {}, settings.attributes, {
+		settings = window.lodash.assign({}, settings, {
+			attributes: window.lodash.assign({}, settings.attributes, {
 				animation: {
 					type: 'string',
 				},
@@ -22,8 +22,8 @@ wp.hooks.addFilter(
 				animationDuration: {
 					type: 'string',
 				}
-			} ),
-		} );
+			}),
+		});
 		return settings;
 	}
 );

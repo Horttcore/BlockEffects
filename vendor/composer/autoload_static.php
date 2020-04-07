@@ -7,17 +7,30 @@ namespace Composer\Autoload;
 class ComposerStaticInit3ede8810717d9bdc1e1d0b18406bff92
 {
     public static $prefixLengthsPsr4 = array (
+        'R' => 
+        array (
+            'RalfHortt\\TranslatorService\\' => 28,
+            'RalfHortt\\ServiceContracts\\' => 27,
+            'RalfHortt\\Plugin\\' => 17,
+        ),
         'H' => 
         array (
-            'Horttcore\\Plugin\\' => 17,
             'Horttcore\\BlockEffects\\' => 23,
         ),
     );
 
     public static $prefixDirsPsr4 = array (
-        'Horttcore\\Plugin\\' => 
+        'RalfHortt\\TranslatorService\\' => 
         array (
-            0 => __DIR__ . '/..' . '/horttcore/wp-plugin/src',
+            0 => __DIR__ . '/..' . '/ralfhortt/translator-service/src',
+        ),
+        'RalfHortt\\ServiceContracts\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ralfhortt/service-contracts/src',
+        ),
+        'RalfHortt\\Plugin\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/ralfhortt/wp-plugin/src',
         ),
         'Horttcore\\BlockEffects\\' => 
         array (
