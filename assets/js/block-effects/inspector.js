@@ -1,20 +1,12 @@
-const { __ } = wp.i18n;
-
-const { createHigherOrderComponent } = wp.compose;
-const { Fragment } = wp.element;
-const { InspectorControls } = wp.editor;
-const { TextControl, SelectControl, PanelBody, IconButton } = wp.components;
-
-import supportedBlocks from './blocks';
+import { __ } from '@wordpress/i18n';
+import { createHigherOrderComponent } from '@wordpress/compose';
+import { Fragment } from '@wordpress/element';
+import { InspectorControls } from '@wordpress/block-editor';
+import { TextControl, SelectControl, PanelBody, IconButton } from '@wordpress/components';
 
 const withInspectorControls = createHigherOrderComponent((BlockEdit) => {
     return (props) => {
-
-        // if ( !window.lodash.includes(supportedBlocks(), props.name))
-        //     return (
-        //         <BlockEdit { ...props } />
-        //     );
-
+        console.log('Props:',props);
         return (
             <Fragment>
                 <BlockEdit {...props} />
@@ -55,7 +47,7 @@ const withInspectorControls = createHigherOrderComponent((BlockEdit) => {
                                 { label: __('Zoom out left', 'block-effects'), value: 'zoom-out-left' },
                                 { label: __('Zoom out right', 'block-effects'), value: 'zoom-out-right' },
                             ]}
-                            onChange={value => props.setAttributes({ animation: value })}
+                            onChange={animation => props.setAttributes({ animation })}
                         />
 
                         <SelectControl
@@ -73,19 +65,49 @@ const withInspectorControls = createHigherOrderComponent((BlockEdit) => {
                                 { label: __('Bottom-Center', 'block-effects'), value: 'bottom-center' },
                                 { label: __('Bottom-Top', 'block-effects'), value: 'bottom-top' },
                             ]}
-                            onChange={value => props.setAttributes({ animationAnchor: value })}
+                            onChange={animationAnchor => props.setAttributes({ animationAnchor })}
+                            // Improve help text to explain what is the first and second value
+                            help={__('First value is element, second value is the viewport position', 'block-effects')}
+                        />
+                        <SelectControl
+                            label={__('Easing', 'block-effects')}
+                            value={props.attributes.animationAnchor}
+                            options={[
+                                { label: __('Default', 'block-effects'), value: '' },
+                                { label: __('linear', 'block-effects'), value: 'linear' },
+                                { label: __('ease', 'block-effects'), value: 'ease' },
+                                { label: __('ease-in', 'block-effects'), value: 'ease-in' },
+                                { label: __('ease-out', 'block-effects'), value: 'ease-out' },
+                                { label: __('ease-in-out', 'block-effects'), value: 'ease-in-out' },
+                                { label: __('ease-in-back', 'block-effects'), value: 'ease-in-back' },
+                                { label: __('ease-out-back', 'block-effects'), value: 'ease-out-back' },
+                                { label: __('ease-in-out-back', 'block-effects'), value: 'ease-in-out-back' },
+                                { label: __('ease-in-sine', 'block-effects'), value: 'ease-in-sine' },
+                                { label: __('ease-out-sine', 'block-effects'), value: 'ease-out-sine' },
+                                { label: __('ease-in-out-sine', 'block-effects'), value: 'ease-in-out-sine' },
+                                { label: __('ease-in-quad', 'block-effects'), value: 'ease-in-quad' },
+                                { label: __('ease-out-quad', 'block-effects'), value: 'ease-out-quad' },
+                                { label: __('ease-in-out-quad', 'block-effects'), value: 'ease-in-out-quad' },
+                                { label: __('ease-in-cubic', 'block-effects'), value: 'ease-in-cubic' },
+                                { label: __('ease-out-cubic', 'block-effects'), value: 'ease-out-cubic' },
+                                { label: __('ease-in-out-cubic', 'block-effects'), value: 'ease-in-out-cubic' },
+                                { label: __('ease-in-quart', 'block-effects'), value: 'ease-in-quart' },
+                                { label: __('ease-out-quart', 'block-effects'), value: 'ease-out-quart' },
+                                { label: __('ease-in-out-quart', 'block-effects'), value: 'ease-in-out-quart' },
+                            ]}
+                            onChange={animationEasing => props.setAttributes({ animationEasing})}
                         />
 
                         <TextControl
                             label={__("Duration")}
                             value={props.attributes.animationDuration}
-                            onChange={value => props.setAttributes({ animationDuration: value })}
+                            onChange={animationDuration => props.setAttributes({ animationDuration })}
                         />
 
                         <TextControl
                             label={__("Delay")}
-                            value={props.attributes.animationDuration}
-                            onChange={value => props.setAttributes({ animationDelay: value })}
+                            value={props.attributes.animationDelay}
+                            onChange={animationDelay => props.setAttributes({ animationDelay })}
                         />
 
                     </PanelBody>

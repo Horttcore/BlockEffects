@@ -1,29 +1,28 @@
-import supportedBlocks from './blocks';
+const { assign } = lodash;
 
 wp.hooks.addFilter(
-	'blocks.registerBlockType',
-	'horttcore/block-effects/attribute',
-	function (settings, name) {
-
-		// if ( !window.lodash.includes(supportedBlocks(),name))
-		//     return settings;
-
-		settings = window.lodash.assign({}, settings, {
-			attributes: window.lodash.assign({}, settings.attributes, {
-				animation: {
-					type: 'string',
-				},
-				animationAnchor: {
-					type: 'string',
-				},
-				animationDelay: {
-					type: 'number',
-				},
-				animationDuration: {
-					type: 'string',
-				}
-			}),
-		});
-		return settings;
-	}
+  "blocks.registerBlockType",
+  "horttcore/block-effects/attribute",
+  function (settings, name) {
+    settings = assign({}, settings, {
+      attributes: assign({}, settings.attributes, {
+        animation: {
+          type: "string",
+        },
+        animationAnchor: {
+          type: "string",
+        },
+        animationDelay: {
+          type: "string",
+        },
+        animationDuration: {
+          type: "string",
+        },
+        animationEasing: {
+          type: "string",
+        },
+      }),
+    });
+    return settings;
+  }
 );
